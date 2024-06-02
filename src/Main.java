@@ -1,16 +1,19 @@
 import java.util.HashSet;
-import java.util.Set;
-
 public class Main {
     public static void main(String[] args) {
-        // creo un oggetto dello stesso tipo dell' HashSet ''String'' e lo riempio richiamando setAnimali()
-        Set<String> animali = new HashSet<String>(setAnimali());
-        //Stampo animali per verificare se il nuovo set è stato popolato
-        System.out.println("gli animali nella lista sono : " + animali);
-
+        // 2) creo un oggetto dello stesso tipo dell' HashSet ''String'' e lo riempio;
+        String cercaAnimale = "ornitorinco";
+        // 3) utilizzo l' if-else per cercare se il nuovo oggetto è all'interno della lista;
+        // 4) utilizzando .contains() cerco all'interno del metodo setAnimali se il nuovo oggetto si trova nella lista.
+        // 5) a seguire le relative stampe
+        if (setAnimali().contains(cercaAnimale)){
+            System.out.println(cercaAnimale + " è nella lista");
+        }else {
+            System.out.println(cercaAnimale + " non è nella lista");
+        }
 
     }
-    // creo un metodo che restituisce un HashSet pieno
+    // 1) creo un metodo che restituisce un HashSet pieno
     private static HashSet<String> setAnimali() {
         HashSet<String> animaliQuattroZampe = new HashSet<String>();
         animaliQuattroZampe.add("cane");
